@@ -3,7 +3,7 @@ import { CastData } from '../types/Cast'
 import { CastCard } from './CastCard'
 import { useData } from '../hooks/useData'
 import { Error, Loading } from '.'
-import { Slider } from './layouts/slider'
+import { Slider } from './layouts/Slider'
 
 export const CastCardContainer = () => {
 	const name = 'cast'

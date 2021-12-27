@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from '@emotion/styled'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
