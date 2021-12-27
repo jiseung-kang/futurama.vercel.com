@@ -1,4 +1,4 @@
-export interface Episodes {
+export interface EpisodeData {
 	number: string;
 	title: string;
 	writers: string;

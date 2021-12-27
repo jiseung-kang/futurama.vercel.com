@@ -1,4 +1,4 @@
-export interface Characters {
+export interface CharacterData {
 	name: {
 		first: string;
 		middle: string;
@@ -12,7 +12,7 @@ export interface Characters {
 	species: string;
 	homePlanet: string;
 	occupation: string;
-	sayings: [];
+	sayings: [string];
 	id: number;
 	age: string;
 }

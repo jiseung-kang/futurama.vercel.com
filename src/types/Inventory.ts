@@ -1,4 +1,4 @@
-export interface Inventory {
+export interface InventoryData {
 	title: string;
 	category: string;
 	description: string;

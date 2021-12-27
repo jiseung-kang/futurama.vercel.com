@@ -6,3 +6,36 @@ export const MEDIA_QUERY_END_POINT = {
 	DESKTOP: '1920px',
 	LARGE: '2560px',
 };
+
+export const ROUTES = [
+	{
+		ID: 0,
+		PATH: '/info',
+		LABEL: 'Synopsis',
+	},
+	{
+		ID: 1,
+		PATH: '/characters',
+		LABEL: 'Characters',
+	},
+	{
+		ID: 2,
+		PATH: '/cast',
+		LABEL: 'Cast',
+	},
+	{
+		ID: 3,
+		PATH: '/episodes',
+		LABEL: 'Episodes',
+	},
+	{
+		ID: 4,
+		PATH: '/questions',
+		LABEL: 'Questions',
+	},
+	{
+		ID: 5,
+		PATH: '/inventory',
+		LABEL: 'Inventory',
+	},
+];

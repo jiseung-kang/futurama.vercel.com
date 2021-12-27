@@ -1,6 +1,6 @@
-export interface Questions {
+export interface QuestionData {
 	id: number;
 	question: string;
-	possibleAnswers: [];
-	correntAnswers: string;
+	possibleAnswers: Array<string>;
+	correctAnswer: string;
 }
