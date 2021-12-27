@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
-import { QuestionCardContainer } from '../../components/QuestionCardContainer';
+import type { NextPage } from 'next'
+import { QuestionCardContainer } from '../../components/QuestionCardContainer'
 
 const QuestionIndexPage: NextPage = () => {
 	return (
 		<div>
 			<QuestionCardContainer />
 		</div>
-	);
-};
+	)
+}
 
-export default QuestionIndexPage;
+export default QuestionIndexPage

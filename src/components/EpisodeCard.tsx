@@ -1,49 +1,57 @@
-import styled from '@emotion/styled';
-import { EpisodeData } from '../types/Episodes';
+import styled from '@emotion/styled'
+import Link from 'next/link'
+import { EpisodeData } from '../types/Episodes'
 
 interface EpisodeCardProps {
-	episodeData: EpisodeData;
+	episodeData: EpisodeData
 }
 
 export const EpisodeCard = ({ episodeData }: EpisodeCardProps) => {
-	const { id, number, title, writers, originalAirDate, desc } = episodeData;
+	const { id, number, title, writers, originalAirDate, desc } = episodeData
 
 	return (
 		<Card>
-			<Number>{number}</Number>
-			<Title>{title}</Title>
-			<Date>{originalAirDate}</Date>
-			<Description>{desc}</Description>
-			<Writer>{writers}</Writer>
+			<Link href={`/episodes/${id}`}>
+				<a>
+					<Title>
+						{number} : {title}
+					</Title>
+					<Description>{desc}</Description>
+					<Detail>
+						{originalAirDate}, Written by {writers}
+					</Detail>
+				</a>
+			</Link>
 		</Card>
-	);
-};
+	)
+}
 
 const Card = styled.div`
+	margin: 15px 0;
 	line-height: 12px;
-	padding: 0px 20px;
-`;
-
-const Number = styled.h2`
-	font-size: 20px;
-	font-weight: 700;
-`;
+	padding: 20px;
+	background: white;
+	border-radius: 20px;
+	text-align: center;
+`
 
 const Title = styled.h3`
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 600;
-	line-height: 20px;
-`;
-
-const Date = styled.p`
-	font-size: 12px;
-`;
+	color: black;
+	padding-bottom: 10px;
+`
 
 const Description = styled.p`
-	font-size: 14px;
-	line-height: 14px;
-`;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	color: grey;
+	padding-bottom: 10px;
+`
 
-const Writer = styled.p`
+const Detail = styled.p`
 	font-size: 12px;
-`;
+	font-style: italic;
+	color: darkgrey;
+`

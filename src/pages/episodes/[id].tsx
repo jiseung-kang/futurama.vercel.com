@@ -1,20 +1,20 @@
-import styled from '@emotion/styled';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { Error, Loading } from '../../components';
-import { useData } from '../../hooks/useData';
+import styled from '@emotion/styled'
+import { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { Error, Loading } from '../../components'
+import { useData } from '../../hooks/useData'
 
 const EpisodeDetail: NextPage = () => {
-	const router = useRouter();
-	const { id } = router.query;
-	const pathname = 'episodes';
+	const router = useRouter()
+	const { id } = router.query
+	const pathname = 'episodes'
 
-	const { data, error } = useData(pathname, id);
+	const { data, error } = useData(pathname, id)
 
-	if (error) return <Error />;
-	if (!data) return <Loading />;
+	if (error) return <Error />
+	if (!data) return <Loading />
 
-	const { number, title, writers, originalAirDate, desc } = data;
+	const { number, title, writers, originalAirDate, desc } = data
 
 	return (
 		<EpisodeDetailCard>
@@ -30,14 +30,14 @@ const EpisodeDetail: NextPage = () => {
 				</ul>
 			</Info>
 		</EpisodeDetailCard>
-	);
-};
+	)
+}
 
 const EpisodeDetailCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-`;
+`
 
 const Info = styled.div`
 	padding-top: 30px;
@@ -52,7 +52,7 @@ const Info = styled.div`
 	ul li {
 		list-style: none;
 	}
-`;
+`
 
 const Description = styled.div`
 	font-style: italic;
@@ -64,6 +64,6 @@ const Description = styled.div`
 		width: 80%;
 		margin: 10px auto;
 	}
-`;
+`
 
-export default EpisodeDetail;
+export default EpisodeDetail

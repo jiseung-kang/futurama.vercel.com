@@ -1,2 +1,2 @@
-export { Error } from './Error';
-export { Loading } from './Loading';
+export { Error } from './Error'
+export { Loading } from './Loading'

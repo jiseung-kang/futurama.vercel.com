@@ -1,12 +1,12 @@
-import styled from '@emotion/styled';
-import { InfoData } from '../types/Info';
+import styled from '@emotion/styled'
+import { InfoData } from '../types/Info'
 
 interface InfoCardProps {
-	infoData: InfoData;
+	infoData: InfoData
 }
 
 export const InfoCard = ({ infoData }: InfoCardProps) => {
-	const { id, synopsis, yearsAired, creators } = infoData;
+	const { id, synopsis, yearsAired, creators } = infoData
 
 	return (
 		<Card>
@@ -18,20 +18,20 @@ export const InfoCard = ({ infoData }: InfoCardProps) => {
 				<a href={creators[1].url}>{creators[1].name}</a>
 			</Creator>
 		</Card>
-	);
-};
+	)
+}
 
 const Card = styled.p`
 	text-align: center;
-`;
+`
 
 const Synopsis = styled.p`
+	padding: 5%;
 	background: white;
-	padding: 20px 40px;
 	border-radius: 20px;
 	line-height: 30px;
 	font-weight: 300;
-`;
+`
 
 const Creator = styled.p`
 	background: white;
@@ -39,4 +39,4 @@ const Creator = styled.p`
 	padding: 20px 40px;
 	line-height: 15px;
 	font-weight: 500;
-`;
+`

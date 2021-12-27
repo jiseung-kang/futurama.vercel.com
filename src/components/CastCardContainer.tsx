@@ -1,37 +1,44 @@
-import styled from '@emotion/styled';
-import { CastData } from '../types/Cast';
-import { CastCard } from './CastCard';
-import { useData } from '../hooks/useData';
-import { Error, Loading } from '.';
-import { Slider } from './layouts/slider';
+import styled from '@emotion/styled'
+import { CastData } from '../types/Cast'
+import { CastCard } from './CastCard'
+import { useData } from '../hooks/useData'
+import { Error, Loading } from '.'
+import { Slider } from './layouts/slider'
 
 export const CastCardContainer = () => {
-	const name = 'cast';
-	const { data, error } = useData(name, '');
+	const name = 'cast'
+	const { data, error } = useData(name, '')
 
-	if (error) return <Error />;
-	if (!data) return <Loading />;
+	if (error) return <Error />
+	if (!data) return <Loading />
 
 	return (
 		<Container>
 			<Title>CAST</Title>
-			{data.map((name: CastData) => {
-				return <CastCard castData={name} key={`futurama-${name}-${name.id}`} />;
-			})}
+			<Decription>Click Card to get MORE INFORMATION</Decription>
+			<Slider>
+				{data.map((name: CastData) => {
+					return <CastCard castData={name} key={`futurama-${name}-${name.id}`} />
+				})}
+			</Slider>
 		</Container>
-	);
-};
+	)
+}
 
 const Container = styled.div`
 	text-align: center;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-`;
+	padding: 0 10% 0 10%;
+`
 // media query
 
 const Title = styled.h1`
-	grid-column: 1/4;
 	text-align: center;
-`;
+`
 
-export default CastCardContainer;
+const Decription = styled.h2`
+	color: brown;
+	font-size: 20px;
+	font-weigth: 500;
+	text-align: center;
+`
+export default CastCardContainer

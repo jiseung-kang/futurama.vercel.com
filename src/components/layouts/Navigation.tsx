@@ -1,13 +1,13 @@
-import styled from '@emotion/styled';
-import Link from 'next/link';
-import { ROUTES } from '../../constants';
-styled;
-import { boxMouseOverHandler, boxMouseOutHandler } from '../../utils/mouseHandle';
+import styled from '@emotion/styled'
+import Link from 'next/link'
+import { ROUTES } from '../../constants'
+styled
+import { boxMouseOverHandler, boxMouseOutHandler } from '../../utils/mouseHandler'
 
 interface ROUTE {
-	ID: number;
-	PATH: string;
-	LABEL: string;
+	ID: number
+	PATH: string
+	LABEL: string
 }
 
 export const Navigation = () => {
@@ -27,14 +27,14 @@ export const Navigation = () => {
 										<a>{routeObject.LABEL}</a>
 									</Link>
 								</li>
-							);
+							)
 						})}
 					</List>
 				</Box>
 			</Navi>
 		</>
-	);
-};
+	)
+}
 
 const Box = styled.div`
 	display: block;
@@ -45,7 +45,7 @@ const Box = styled.div`
 	height: 80px;
 	display: flex;
 	justify-content: center;
-`;
+`
 
 const Menu = styled.button`
 	background: white;
@@ -55,7 +55,7 @@ const Menu = styled.button`
 	margin: 5px;
 	font-size: 20px;
 	font-weight: 700;
-`;
+`
 
 const Title = styled.h1`
 	font-family: 'Rock 3D', cursive;
@@ -69,7 +69,7 @@ const Title = styled.h1`
 	height: 80px;
 	margin: 0px;
 	padding: 0;
-`;
+`
 
 const Navi = styled.nav`
 	margin: 0px;
@@ -77,7 +77,7 @@ const Navi = styled.nav`
 	position: sticky;
 	top: 96px;
 	bottom: 0;
-`;
+`
 
 const List = styled.ul`
 	padding: 0;
@@ -98,4 +98,4 @@ const List = styled.ul`
 		color: black;
 		font-weight: 700;
 	}
-`;
+`
