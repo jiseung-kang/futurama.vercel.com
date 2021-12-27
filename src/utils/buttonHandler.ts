@@ -8,8 +8,8 @@ export const btnRightHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
 	if (cont) cont.scrollLeft += 100
 }
 
-export const onWheel = (event: React.WheelEventHandler<HTMLDivElement>) => {
-	console.log('move...')
-	const cont = document.querySelector('.slide')
-	if (cont) cont.scrollLeft += event.deltaY
-}
+// export const onWheel = (event: React.WheelEventHandler<HTMLDivElement>) => {
+// 	console.log('move...')
+// 	const cont = document.querySelector('.slide')
+// 	if (cont) cont.scrollLeft += event.deltaY
+// }

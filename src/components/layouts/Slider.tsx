@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import { MEDIA_QUERY_END_POINT } from '../../constants'
-import { btnLeftHandler, btnRightHandler, onWheel } from '../../utils/buttonHandler'
+import { btnLeftHandler, btnRightHandler } from '../../utils/buttonHandler'
 
 // React.FC를 사용할 때는 props 의 타입을 Generics 로 넣어서 사용
 // props 에 기본적으로 children 이 들어가있다
