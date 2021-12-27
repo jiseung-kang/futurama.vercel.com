@@ -18,10 +18,10 @@ const Home: NextPage = () => {
 			<main>
 				<InfoCardContainer />
 				<CharacterCardContainer />
-				<CastCardContainer />
 				<EpisodeCardContainer />
+				{/* <CastCardContainer />
 				<QuestionCardContainer />
-				<InventoryCardContainer />
+				<InventoryCardContainer /> */}
 			</main>
 		</div>
 	)
