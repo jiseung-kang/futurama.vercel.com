@@ -3,7 +3,7 @@ import { InventoryData } from '../types/Inventory'
 import { Error, Loading } from '.'
 import { InventoryCard } from './InventoryCard'
 import { useData } from '../hooks/useData'
-import { Slider } from './layouts/slider'
+import { Slider } from './layouts/Slider'
 
 export const InventoryCardContainer = () => {
 	const name = 'inventory'

@@ -3,7 +3,7 @@ import { CharacterData } from '../types/Characters'
 import { CharacterCard } from './CharacterCard'
 import { useData } from '../hooks/useData'
 import { Error, Loading } from '.'
-import { Slider } from './layouts/slider'
+import { Slider } from './layouts/Slider'
 
 export const CharacterCardContainer = () => {
 	const name = 'characters'
