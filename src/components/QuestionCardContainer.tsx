@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { QuestionData } from '../types/Questions'
 import { Error, Loading } from '.'
-import { QuestionCard } from './QuestionCard'
 import { useData } from '../hooks/useData'
+import Link from 'next/link'
 
 export const QuestionCardContainer = () => {
 	const name = 'questions'
@@ -14,11 +14,11 @@ export const QuestionCardContainer = () => {
 	return (
 		<Container>
 			<h1>Futurama Quiz </h1>
-			<Quiz>
-				{data.map((name: QuestionData) => {
-					return <QuestionCard questionData={name} key={`futurama-${name}-${name.id}`} />
-				})}
-			</Quiz>
+			<Link href="questions/1">
+				<a>
+					<Go>Go Futurama Quiz</Go>
+				</a>
+			</Link>
 		</Container>
 	)
 }
@@ -26,16 +26,17 @@ export const QuestionCardContainer = () => {
 const Container = styled.div`
 	text-align: center;
 `
-
-const Quiz = styled.div`
-	text-align: center;
-	width: 80%;
-	margin: 0 auto;
-	background: white;
+const Go = styled.p`
+width: 200px;
+margin: 0 auto;
+	font-size: 24px;
+	font-weight = 300;
+	padding: 20px 20px;
+	border: 2px solid darkgrey;
 	border-radius: 20px;
-	height: 300px;
-	overflow-y: scroll;
+	cursor: pointer;
+	background-color: green;
+	color: white;
 `
-// media query
 
 export default QuestionCardContainer
