@@ -10,7 +10,7 @@ export const InventoryCard = ({ inventoryData }: InventoryCardProps) => {
 	const { id, title, category, description, slogan, price, stock } = inventoryData
 
 	return (
-		<Card>
+		<Card key={`{id}-inventory`}>
 			<h2>{category}</h2>
 			<h3>{title}</h3>
 			<Description>{description}</Description>
@@ -26,7 +26,6 @@ export const InventoryCard = ({ inventoryData }: InventoryCardProps) => {
 }
 
 const Card = styled.div`
-	width: 100%;
 	line-height: 20px;
 	padding: 20px;
 	background-color: white;

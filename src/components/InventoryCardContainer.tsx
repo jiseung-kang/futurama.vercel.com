@@ -27,9 +27,7 @@ export const InventoryCardContainer = () => {
 const Container = styled.div`
 	text-align: center;
 	padding: 0 10% 0 10%;
-	overflow-wrap: break-word;
 `
-// media query
 
 const Title = styled.h1`
 	text-align: center;

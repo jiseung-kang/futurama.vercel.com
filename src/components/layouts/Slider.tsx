@@ -19,7 +19,7 @@ export const Slider: React.FC = ({ children }) => {
 }
 
 const Container = styled.div`
-	width: 100%;
+	// width: 100%;
 	height: 100%;
 	display: flex;
 `
@@ -30,13 +30,14 @@ height: 50px;
 background: none;
 border: none;
 font-size: 40px;
-padding: 20px;
-cursor: pointer
-color: white;`
+padding: 5%;
+cursor: pointer;
+color: black;`
 
 const Slide = styled.div`
 	display: flex;
-	width: 100%;
-	height: 100%;
+	align-items: center;
+	// width: 100%;
+	// height: 100%;
 	overflow-x: scroll;
 `
