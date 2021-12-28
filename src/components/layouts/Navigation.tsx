@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { ROUTES } from '../../constants'
+import { MEDIA_QUERY_END_POINT, ROUTES } from '../../constants'
 styled
 
 interface ROUTE {
@@ -54,5 +54,8 @@ const Navi = styled.nav`
 	background-color: #aa384d;
 	li {
 		list-style: none;
+	}
+	@media (max-width: ${MEDIA_QUERY_END_POINT.MOBILE}) {
+		font-size: 16px;
 	}
 `
